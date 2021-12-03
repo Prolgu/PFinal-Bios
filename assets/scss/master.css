@@ -292,7 +292,6 @@ main {
 
 .main-back {
   height: 100%;
-  width: 100%;
   background: url("../../assets/img/17021-4k.jpg") 0 0 no-repeat;
   background-position: center;
   background-size: cover;
@@ -370,7 +369,6 @@ main {
   justify-content: center;
   margin-top: 300px;
   min-height: 200px;
-  width: 100%;
   overflow: hidden;
 }
 .main-section-uno .about-section {
@@ -394,7 +392,6 @@ main {
   margin-top: 300px;
   margin-bottom: 100px;
   height: 400px;
-  width: 100%;
 }
 .main-section-dos .contact {
   width: clamp(60%, 600px, 85%);

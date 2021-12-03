@@ -33,7 +33,6 @@ main{ margin-top: 100px; }
 }
 .main-back{
     height: 100%;
-    width: 100%;
     background: url("../../assets/img/17021-4k.jpg") 0 0 no-repeat  ;
     // background: url("../../assets/img/17010-4k.jpg") 0 0 no-repeat  ;
     background-position: center;
@@ -112,7 +111,6 @@ main{ margin-top: 100px; }
     justify-content: center;
     margin-top:300px;
     min-height: 200px;
-    width: 100%;
     overflow: hidden;
     .about-section{
         width:clamp(60%,1000px,85%);
@@ -133,7 +131,6 @@ main{ margin-top: 100px; }
     margin-top:300px;
     margin-bottom: 100px;
     height: 400px;
-    width: 100%;
     .contact{
         width:clamp(60%,600px,85%);
         min-height:400px;
@@ -152,7 +149,6 @@ main{ margin-top: 100px; }
             left: 0;
         }
         &-footer{
-            // width: 100%;
             left: 0;
             bottom: 40px;
             justify-content: center;

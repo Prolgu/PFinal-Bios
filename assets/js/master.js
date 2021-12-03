@@ -1,7 +1,9 @@
+//=====================================================================
 // funcion para conseguir el ancho de pagina
 // al llegar a <= 500px agrega la clase fake-div al elemento cont
 const cont = document.getElementById("cont")
 const welc = document.getElementById("welcome")
+
 const winSizeCss = () => {
     let w = document.documentElement.clientWidth
     if (w <= 500) {
@@ -13,14 +15,13 @@ const winSizeCss = () => {
         welc.classList.remove('fake-glass')
     }
 }
-
 //=====================================================================
 const arrw = document.getElementById("arrowUp")
 
 const arrowUp = (a = false) => {
     if (a === true) {
-        arrw.style.visibility = "visible"
         arrw.classList.add('arrow-up')
+        arrw.style.visibility = "visible"
     } else {
         arrw.style.visibility = "hidden"
         arrw.classList.remove('arrow-up')
@@ -38,30 +39,36 @@ const scrollPosPerc = () => {
 
 }
 
+//=====================================================================
 const hamburger = document.querySelector(".hamburger")
 const navMenu = document.querySelector(".nav-menu")
-
-hamburger.addEventListener("click", mobileMenu)
 
 function mobileMenu() {
     hamburger.classList.toggle("active")
     navMenu.classList.toggle("active")
 }
-
+//=====================================================================
 
 // consulto  alcarcar el script
 winSizeCss()
-
 // para empezar sin ver la flecha
 arrowUp()
-
-
 // listener para saber consultar en resize window <= '500px'
 window.addEventListener("resize", winSizeCss)
-
 //listener para el scroll
 window.addEventListener("scroll", scrollPosPerc)
+//evento para el menu hamburguesa
+hamburger.addEventListener("click", mobileMenu)
+
 
 console.groupCollapsed('No mirar')
-console.log('Dije que no miraras');
-console.groupEnd();
+console.log(`
+██████╗ ██████╗  ██████╗ ██╗      ██████╗ ██╗   ██╗
+██╔══██╗██╔══██╗██╔═══██╗██║     ██╔════╝ ██║   ██║
+██████╔╝██████╔╝██║   ██║██║     ██║  ███╗██║   ██║
+██╔═══╝ ██╔══██╗██║   ██║██║     ██║   ██║██║   ██║
+██║     ██║  ██║╚██████╔╝███████╗╚██████╔╝╚██████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝ 
+Dije que no mirar, pero ya que estas aca: https://github.com/Prolgu/PFinal-Bios
+    `);
+console.groupEnd()
