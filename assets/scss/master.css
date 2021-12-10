@@ -109,7 +109,7 @@ footer {
   background: #455a64;
 }
 
-.main-section-dos .contact p, .hero-div .hero-title, .black1 {
+.main-section-dos .contact p, .black1 {
   color: #090b13;
 }
 
@@ -149,7 +149,7 @@ body, .btn:hover, .btn, .nav-link, .white1 {
   background: #b47fff;
 }
 
-.arrow-up .chev-up, .yell {
+.hero-div .hero-sub-blog, .arrow-up .chev-up, .yell {
   color: #ffb300;
 }
 
@@ -210,7 +210,7 @@ body, .btn:hover, .btn, .nav-link, .white1 {
   font-weight: 500;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 980px) {
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -263,6 +263,32 @@ body, .btn:hover, .btn, .nav-link, .white1 {
   background: #34007f;
   background: linear-gradient(90deg, #34007f 46%, #6900ff 100%);
 }
+.arrow-up {
+  position: fixed;
+  right: 1%;
+  bottom: 10%;
+  z-index: 999;
+  opacity: 0;
+  transform-origin: center bottom;
+  transform: scale(0) translate3d(0, -200%, 0);
+  animation: arrow-up 0.5s ease-in-out forwards;
+}
+.arrow-up .chev-up {
+  font-size: 32px;
+}
+
+@keyframes arrow-up {
+  0% {
+    bottom: 0;
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    bottom: 15%;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 body {
   letter-spacing: 0.5px;
 }
@@ -273,8 +299,6 @@ main {
 
 .centered-text {
   display: block;
-  gap: 10px;
-  align-items: center;
   text-align: center;
 }
 
@@ -355,15 +379,10 @@ main {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  border: 2px solid black;
-}
-.hero-div .hero-title {
-  font-size: 42px;
 }
 .hero-div .hero-sub {
   font-size: 32px;
 }
-
 .main-section-uno {
   display: flex;
   justify-content: center;
@@ -429,41 +448,18 @@ main {
 .footer p {
   display: inline-flex;
   align-items: center;
-}
-.footer p i {
-  color: red;
-  padding: 3px;
+  font-size: 22px;
 }
 .footer .footer-nav a {
   padding: 5px;
 }
 
-.arrow-up {
-  position: fixed;
-  right: 1%;
-  bottom: 10%;
-  z-index: 999;
-  opacity: 0;
-  transform-origin: center bottom;
-  transform: scale(0) translate3d(0, -200%, 0);
-  animation: arrow-up 0.5s ease-in-out forwards;
-}
-.arrow-up .chev-up {
-  font-size: 32px;
+.arch-logo {
+  color: skyblue;
+  padding: 3px;
+  font-size: 26px;
 }
 
-@keyframes arrow-up {
-  0% {
-    bottom: 0;
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    bottom: 15%;
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 .media {
   padding-right: 10px;
 }
@@ -475,17 +471,14 @@ main {
   color: #fff;
   font-size: 25px;
 }
-
 .fa-linkedin:hover {
   color: #3b5998;
   transition: all 0.5s ease;
 }
-
 .fa-instagram:hover {
   color: #bc2a8d;
   transition: all 0.5s ease;
 }
-
 .fa-github:hover {
   color: #333;
   transition: all 0.5s ease;

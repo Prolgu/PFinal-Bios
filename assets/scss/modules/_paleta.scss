@@ -32,8 +32,7 @@ $paleta:(
        @extend %#{$name};
     }
 
-    %bg-#{$name} {
-        background: #{$color};
+    %bg-#{$name} { background: #{$color};
     }
 
     .bg-#{$name} {
