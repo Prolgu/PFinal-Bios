@@ -10,14 +10,10 @@ html, body {
 
 section,
 .main-wrapper,
-main {
-    position: relative;
-}
+main { position: relative; }
 
 .main-wrapper,
-main {
-    min-height: 100%;
-}
+main { min-height: 100%; }
 
 footer {
     @extend %absolute;

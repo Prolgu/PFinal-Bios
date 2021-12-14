@@ -297,9 +297,26 @@ main {
   margin-top: 100px;
 }
 
+.justify-text {
+  text-align: justify;
+}
+
+.centered-el {
+  justify-content: center;
+}
+
 .centered-text {
   display: block;
   text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  display: block;
 }
 
 .fake-glass {
@@ -325,6 +342,22 @@ main {
 .abs-100 {
   position: absolute;
   width: 100%;
+}
+
+.blog-font {
+  font-family: Hack, Courier New, Courier, monospace;
+}
+.blog-font-title {
+  color: #ffb300;
+  font-size: 32px;
+}
+
+.blog-indice li a {
+  text-decoration: transparent;
+  color: skyblue;
+}
+.blog-indice li a:hover {
+  color: #ffb300;
 }
 
 .header-nav {
@@ -433,7 +466,7 @@ main {
 }
 .main-section-dos .contact-footer {
   left: 0;
-  bottom: 40px;
+  bottom: 140px;
   justify-content: center;
 }
 
@@ -482,6 +515,48 @@ main {
 .fa-github:hover {
   color: #333;
   transition: all 0.5s ease;
+}
+
+.main-section-blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.main-section-blog .contact-blog {
+  width: clamp(60%, 600px, 85%);
+  min-height: 200px;
+  padding: 10px;
+}
+.main-section-blog .contact-blog h2 {
+  font-size: 42px;
+}
+.main-section-blog .contact-blog p {
+  top: -30px;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.main-section-blog .contact-blog-main {
+  top: 140px;
+  left: 0;
+}
+.main-section-blog .contact-blog-footer {
+  left: 0;
+  bottom: 140px;
+  justify-content: center;
+}
+
+.hero-box-blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 540px) {
+  .hero-box-blog {
+    margin-top: 180px;
+  }
 }
 
 /*# sourceMappingURL=master.css.map */

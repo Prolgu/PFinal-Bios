@@ -17,10 +17,19 @@ body{
 }
 main{ margin-top: 100px; }
 .second-title{ @extend %blue1; }
+.justify-text{ text-align: justify; }
+.centered-el{
+    justify-content: center;
+}
 .centered-text{
     display: block;
     text-align: center;
 }
+.center{
+    display: flex;
+    justify-content: center;
+}
+.block{display: block;}
 .fake-glass {
     background-color: rgba(10, 0, 20, 0.3);
     border: solid 1px rgba(0, 0, 0, 0.2);
@@ -42,6 +51,25 @@ main{ margin-top: 100px; }
 .abs-100{
     position: absolute;
     width: 100%;
+}
+.blog-font{
+  font-family: Hack, Courier New, Courier, monospace;
+  &-title{
+    color: $yell;
+    font-size: 32px;
+  }
+}
+.blog-indice{
+    li{
+        // width: 60%;
+        a{ 
+            text-decoration: transparent;
+            color: skyblue;
+            &:hover{
+                color: $yell;
+            }
+        }    
+    }
 }
 // header ===========================
 .header-nav{
@@ -91,12 +119,7 @@ main{ margin-top: 100px; }
         height: 200px;
         width: 200px;
         border-radius: 50%;
-        // border: 2px solid black;
     }
-    // .hero-title{
-    //     @extend %black1; 
-    //     font-size: 42px;
-    // }
     .hero-sub{
         @extend %blue1; 
         font-size: 32px;
@@ -150,7 +173,7 @@ main{ margin-top: 100px; }
         }
         &-footer{
             left: 0;
-            bottom: 40px;
+            bottom: 140px;
             justify-content: center;
         }
     }
@@ -170,10 +193,6 @@ main{ margin-top: 100px; }
         display: inline-flex;
         align-items: center;
         font-size: 22px;
-        // span{
-        //     color: blue;
-        //     padding: 3px;
-        // }
     }
     .footer-nav{
         a{ padding: 5px; }
@@ -209,6 +228,49 @@ main{ margin-top: 100px; }
             color: #333;
             transition: all 0.5s ease;
         }
+    }
+}
+
+
+
+.main-section-blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    .contact-blog{
+        width:clamp(60%,600px,85%);
+        min-height:200px;
+        padding: 10px;
+        // position: relative;
+        h2{ font-size: 42px; }
+        p{
+            top: -30px;
+            letter-spacing: .5px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        &-main{
+            top:140px;
+            left: 0;
+        }
+        &-footer{
+            left: 0;
+            bottom: 140px;
+            justify-content: center;
+        }
+    }
+}
+
+.hero-box-blog{
+    // margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include respond-to(m-540){
+        margin-top: 180px;
     }
 }
 //===================================
