@@ -1,21 +1,4 @@
 //=====================================================================
-// funcion para conseguir el ancho de pagina
-// al llegar a <= 500px agrega la clase fake-div al elemento cont
-let cont = document.getElementById("cont")
-let welc = document.getElementById("welcome")
-
-const winSizeCss = () => {
-    let pageWidth = document.documentElement.clientWidth
-    if (pageWidth <= 500) {
-        cont.classList.add('fake-glass')
-        welc.classList.add('fake-glass')
-        // console.log(w)
-    } else {
-        cont.classList.remove('fake-glass')
-        welc.classList.remove('fake-glass')
-    }
-}
-//=====================================================================
 const arrw = document.getElementById("arrowUp")
 
 const arrowUp = (a = false) => {
@@ -48,14 +31,8 @@ function mobileMenu() {
     navMenu.classList.toggle("active")
 }
 //=====================================================================
-
-// consulto  alcarcar el script
-((cont && welc) != null) ? winSizeCss() : console.log('No hay nada qui amiwo')
-
 // para empezar sin ver la flecha
 arrowUp()
-// listener para saber consultar en resize window <= '500px'
-window.addEventListener("resize", winSizeCss)
 //listener para el scroll
 window.addEventListener("scroll", scrollPosPerc)
 //evento para el menu hamburguesa

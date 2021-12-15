@@ -8,6 +8,8 @@
 @import 'modules/hamburgermenu';
 @import 'modules/buttons';
 @import 'modules/arrow';
+@import 'modules/blog';
+
 //===================================
 // G-Code ===========================
 body{
@@ -52,25 +54,6 @@ main{ margin-top: 100px; }
     position: absolute;
     width: 100%;
 }
-.blog-font{
-  font-family: Hack, Courier New, Courier, monospace;
-  &-title{
-    color: $yell;
-    font-size: 32px;
-  }
-}
-.blog-indice{
-    li{
-        // width: 60%;
-        a{ 
-            text-decoration: transparent;
-            color: skyblue;
-            &:hover{
-                color: $yell;
-            }
-        }    
-    }
-}
 // header ===========================
 .header-nav{
     position:sticky;
@@ -113,7 +96,7 @@ main{ margin-top: 100px; }
     }
 }
 .hero-div{
-    gap:10px;
+    // gap:10px;
     min-height: 400px;
     .hero-img{
         height: 200px;
@@ -231,46 +214,3 @@ main{ margin-top: 100px; }
     }
 }
 
-
-
-.main-section-blog{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    .contact-blog{
-        width:clamp(60%,600px,85%);
-        min-height:200px;
-        padding: 10px;
-        // position: relative;
-        h2{ font-size: 42px; }
-        p{
-            top: -30px;
-            letter-spacing: .5px;
-            font-size: 20px;
-            font-weight: 600;
-        }
-        &-main{
-            top:140px;
-            left: 0;
-        }
-        &-footer{
-            left: 0;
-            bottom: 140px;
-            justify-content: center;
-        }
-    }
-}
-
-.hero-box-blog{
-    // margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    @include respond-to(m-540){
-        margin-top: 180px;
-    }
-}
-//===================================
